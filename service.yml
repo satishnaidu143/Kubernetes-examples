@@ -1,0 +1,46 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tomcat-svc
+  namespace: env-dev
+spec:
+  selector:
+    env1: dev
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+    nodePort: 30001
+  type: NodePort
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tomcat-svc
+  namespace: env-qa
+spec:
+  selector:
+    env2: qa
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+    nodePort: 30002
+  type: NodePort
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tomcat-svc
+  namespace: env-prod
+spec:
+  selector:
+    env3: prod
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+    nodePort: 30003
+  type: NodePort
+---

@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: mytomcat 
+spec:
+  replicas: 2
+  selector:
+    app: mytomcat
+  template:
+    metadata:
+      name: mytomcat
+      labels:
+        app: mytomcat
+        env1: dev
+        env2: qa
+    spec:
+      containers:
+        - name: mytomcat
+          image: tomcat:8
+          ports:
+            - containerPort: 80
+

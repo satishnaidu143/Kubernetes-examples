@@ -9,8 +9,8 @@ spec:
     env1: dev
   ports:
   - protocol: TCP
-    port: 8080
-    targetPort: 8080
+    port: 8081
+    targetPort: 8081
     nodePort: 30001
   type: LoadBalancer
 ---
@@ -24,8 +24,8 @@ spec:
     env2: qa
   ports:
   - protocol: TCP
-    port: 8080
-    targetPort: 8080
+    port: 8081
+    targetPort: 8081
     nodePort: 30002
   type: LoadBalancer
 ---
@@ -39,8 +39,8 @@ spec:
     env3: prod
   ports:
   - protocol: TCP
-    port: 8080
-    targetPort: 8080
+    port: 8081
+    targetPort: 8081
     nodePort: 30003
   type: LoadBalancer
 ---

@@ -63,7 +63,7 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: jenkins
+        image: snaidu/got:v2
         ports:
           - containerPort: 8080
             protocol: TCP

@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: tomcat:7
+        image: snaidu/rideeasy:v3
         ports:
           - containerPort: 8080
             protocol: TCP
@@ -40,7 +40,7 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: tomcat:8
+        image: snaidu/webapp:latest
         ports:
           - containerPort: 8080
             protocol: TCP
@@ -63,7 +63,7 @@ spec:
     spec:
       containers:
       - name: tomcat
-        image: tomcat:9
+        image: snaidu/got:v2
         ports:
           - containerPort: 8080
             protocol: TCP
